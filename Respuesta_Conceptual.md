@@ -3,10 +3,10 @@
 ## 1. Conexión de Copiloto al Repositorio y Buenas Prácticas
 
 **Conexión:**
-La mejor manera es integrar herramientas nativas como GitHub Copilot o Cursor directamente en el IDE, asegurando permisos de lectura limitados y controlados. No se debe otorgar acceso de escritura directo a la rama principal (main/master).
+La mejor manera es integrar herramientas nativas como GitHub Copilot directamente en el IDE en mi caso Antigravity, es asegurando permisos de lectura limitados y controlados. No se debe otorgar acceso de escritura directo a la rama principal (main/master).
 
 **Buenas Prácticas:**
-- **Revisión Obligatoria (Code Review):** Todo código generado por IA debe pasar por un Pull Request revisado por un humano.
+- **Revisión Obligatoria (Code Review):** Todo código generado por IA debe pasar por un Pull Request revisado por un humano de igual forma diferentes al desarrollador que lo generó con el fin de evitar sesgos y errores.
 - **Contexto Limitado:** No alimentar a la IA con secretos, llaves de API o datos sensibles de clientes (PII).
 - **Linters y Tests:** Usar hooks de pre-commit y CI/CD robustos para validar que el código generado cumpla con los estándares del proyecto antes de ser integrado.
 
@@ -14,7 +14,7 @@ La mejor manera es integrar herramientas nativas como GitHub Copilot o Cursor di
 
 Para no convertirse en "copiadores de código" y perder el entendimiento del sistema:
 - **La Regla del "Por Qué":** El desarrollador debe ser capaz de explicar *por qué* la solución de la IA funciona y *por qué* es la mejor opción. Si no puede explicarlo, no debe commitearlo.
-- **Documentación Viva:** Usar la IA para generar documentación que explique la lógica de negocio, no solo el código.
+- **Documentación Viva:** Usar la IA para generar documentación que explique la lógica de negocio, no solo el código. Ejemplo: archivos .md que expliquen la lógica de negocio.
 - **Refactoring Manual:** Dedicar tiempo a refactorizar o reescribir partes críticas manualmente para mantener la agilidad mental y el conocimiento profundo de la arquitectura.
 - **Pair Programming con IA:** Tratas a la IA como un junior o un par: tú diriges la estrategia, ella ejecuta la táctica.
 
@@ -36,7 +36,7 @@ Es un estándar abierto que permite a los asistentes de IA interactuar con datos
 - **Búsqueda Semántica:** Capacidad de entender "qué hace este error" mejor que una búsqueda por palabras clave.
 
 **Debilidades:**
-- **Alucinaciones:** Puede inventar librerías, métodos o versiones de dependencias que no existen o son incompatibles.
+- **Alucinaciones:** Puede inventar librerías, métodos o versiones de dependencias que no existen o son incompatibles. Alcances de la solución más allá de lo necesario.
 - **Contexto Limitado:** A menudo pierde el hilo en bases de código muy grandes o arquitecturas distribuidas complejas si no se le alimenta el contexto correcto.
 - **Falta de Juicio Arquitectónico:** Tiende a optimizar localmente (una función) sin ver el impacto global (arquitectura del sistema), creando deuda técnica a largo plazo.
 
